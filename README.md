@@ -38,7 +38,7 @@ Then we define a function who will take care of the route redirect (this functio
     if(availableRoutes.includes(pathname) === false) history.push("/welcome"); 
 }
 ```
-PD: Note that using includes() function from the availableRoutes array we can directly redirect to a desired route.
+PD: Note that using includes() function from the availableRoutes array we can directly redirect to a desired route. Also note that we're parsing the location in order to remove the slash '/', but we can do it without parsing and storing the route in the availableRoutes with the slashes.
 
 Then the last step is execute the function checkLocations() in order to check the first route access, and pass that function to history.listen for handling route changes from now on:
 
